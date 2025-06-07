@@ -64,14 +64,15 @@ type CampaignForm = {
 
 export function StateContextProvider({ children }: StateContextProviderProps) {
     const { contract } = useContract("0x019f55905515e0c9cc4b34ab926028d881c1a31a")
+    //this is a default wallet
 
 
     const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign')
 
-    const [isAdmin, setIsAdmin] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);//admin setting state
     const address = useAddress()
     const connect = useConnect()
-    const disconnect = useDisconnect()
+    const disconnect = useDisconnect() 
     
     // Add state to store campaigns and refresh timestamp
     const [allCampaignsCache, setAllCampaignsCache] = useState<ParsedCampaign[]>([]);

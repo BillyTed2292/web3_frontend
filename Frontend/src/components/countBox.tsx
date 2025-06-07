@@ -2,7 +2,7 @@ type CountBoxProps = {
     title: string;
     value: string | number;
 }
-
+//what is count box?
 export function CountBox({ title, value }: CountBoxProps) {
     return (
         <div className="flex flex-col items-center w-full max-w-[180px] bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">

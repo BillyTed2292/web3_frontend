@@ -15,7 +15,7 @@ type ParsedCampaign = {
 type FundCardProps = ParsedCampaign & {
     handleClick: () => void
 }
-
+//handle fudding.
 export function FundCard({
     owner,
     title,
